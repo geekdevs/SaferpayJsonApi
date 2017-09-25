@@ -51,6 +51,13 @@ class Card
 
     /**
      * @var string
+     * @SerializedName("VerificationCode")
+     * @Type("string")
+     */
+    protected $verificationCode;
+
+    /**
+     * @var string
      * @SerializedName("HashValue")
      * @Type("string")
      */
@@ -166,6 +173,26 @@ class Card
     public function setCountryCode($countryCode)
     {
         $this->countryCode = $countryCode;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVerificationCode()
+    {
+        return $this->verificationCode;
+    }
+
+    /**
+     * @param string $verificationCode
+     *
+     * @return self
+     */
+    public function setVerificationCode($verificationCode)
+    {
+        $this->verificationCode = $verificationCode;
 
         return $this;
     }
