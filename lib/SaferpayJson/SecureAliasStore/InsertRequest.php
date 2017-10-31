@@ -4,6 +4,7 @@ namespace Ticketpark\SaferpayJson\SecureAliasStore;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
+use Ticketpark\SaferpayJson\Container\Check;
 use Ticketpark\SaferpayJson\Container\Notification;
 use Ticketpark\SaferpayJson\Container\RegisterAlias;
 use Ticketpark\SaferpayJson\Container\ReturnUrls;
@@ -109,4 +110,24 @@ class InsertRequest extends Request
 
         return $this;
     }
+
+    /**
+     * @return \Ticketpark\SaferpayJson\Container\Check
+     */
+    public function getCheck()
+    {
+        return $this->check;
+    }
+
+    /**
+     * @param \Ticketpark\SaferpayJson\Container\Check $check
+     * @return self
+     */
+    public function setCheck(Check $check)
+    {
+        $this->check = $check;
+
+        return $this;
+    }
 }
+
