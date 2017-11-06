@@ -8,6 +8,7 @@ use Ticketpark\SaferpayJson\Container\Check;
 use Ticketpark\SaferpayJson\Container\Notification;
 use Ticketpark\SaferpayJson\Container\RegisterAlias;
 use Ticketpark\SaferpayJson\Container\ReturnUrls;
+use Ticketpark\SaferpayJson\Container\Styling;
 use Ticketpark\SaferpayJson\Message\Request;
 
 class InsertRequest extends Request
@@ -129,5 +130,23 @@ class InsertRequest extends Request
 
         return $this;
     }
-}
 
+    /**
+     * @return \Ticketpark\SaferpayJson\Container\Styling
+     */
+    public function getStyling()
+    {
+        return $this->styling;
+    }
+
+    /**
+     * @param Styling $styling
+     * @return self
+     */
+    public function setStyling(Styling $styling)
+    {
+        $this->styling = $styling;
+
+        return $this;
+    }
+}
